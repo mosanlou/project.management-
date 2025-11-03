@@ -1,10 +1,10 @@
-# On your repository go to Settings -> Actions -> General
-# Scroll down to "Workflow permissions"
-# Select "Read and write permissions"
-# Then enable "Allow GitHub Actions to create and approve pull requests"
-# Save the changes
-
-name: Deploy to GitHub Pages
+name: Build and Deploy
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 on:
   push:
